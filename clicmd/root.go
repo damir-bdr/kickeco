@@ -1,12 +1,10 @@
-package cmd
+package clicmd
 
 import (
 	"log"
 
 	"github.com/spf13/cobra"
 )
-
-const GATEWAY = "https://mainnet.infura.io/v3/3b3b55afe03647b8a528ba48a71211eb"
 
 var rootCmd = &cobra.Command{
 	Use:   "",

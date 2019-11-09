@@ -3,6 +3,8 @@ package main
 import (
 	"log"
 
+	"github.com/damir-bdr/kickeco/clicmd"
+
 	"github.com/damir-bdr/kickeco/contract"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
@@ -25,4 +27,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to instantiate contract: %v\n", err)
 	}
+
+	clicmd.Execute()
 }
