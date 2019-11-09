@@ -23,10 +23,10 @@ func main() {
 	defer conn.Close()
 
 	accountAddress := common.HexToAddress(KickCoinContractAddr)
-	_, err = contract.NewCSToken(accountAddress, conn)
+	contract, err := contract.NewCSToken(accountAddress, conn)
 	if err != nil {
 		log.Fatalf("Failed to instantiate contract: %v\n", err)
 	}
 
-	clicmd.Execute()
+	clicmd.Execute(contract)
 }
